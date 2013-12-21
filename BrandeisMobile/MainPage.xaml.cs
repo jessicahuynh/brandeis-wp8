@@ -32,6 +32,7 @@ namespace BrandeisMobile
             linksIcon.IconUri = new Uri("/Images/favs.png", UriKind.Relative);
             linksIcon.Text = "links";
             ApplicationBar.Buttons.Add(linksIcon);
+            linksIcon.Click += new EventHandler(linksIcon_Click);
             
             ApplicationBarMenuItem full_websiteMenuItem = new ApplicationBarMenuItem();
             full_websiteMenuItem.Text = "full website";
@@ -54,6 +55,11 @@ namespace BrandeisMobile
             {
                 App.ViewModel.LoadData();
             }
+        }
+
+        private void linksIcon_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Links.xaml", UriKind.Relative));
         }
 
         private void full_websiteMenuItem_Click(object sender, EventArgs e)

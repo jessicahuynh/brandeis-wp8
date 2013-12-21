@@ -34,6 +34,19 @@ namespace BrandeisMobile
             }
         }
 
+        private static EntryGroupModel entryModel = null;
+
+        public static EntryGroupModel EntryModel
+        {
+            get
+            {
+                if (EntryModel == null)
+                    entryModel = new EntryGroupModel();
+
+                return entryModel;
+            }
+        }
+
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
         /// </summary>

@@ -1,0 +1,26 @@
+﻿<vm:EntryGroupModel
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="clr-namespace:BrandeisMobile.ViewModels">
+
+    <vm:EntryGroupModel.Links>
+        <vm:EntryGroup EntryGroupTitle="Links">
+            <vm:EntryGroup.Items>
+                <vm:Entry EntryName="Admissions, Undergraduate"
+                          EntryURL="www.brandeis.edu/admissions"
+                          EntryIcon="browser"
+                          />
+                <vm:Entry EntryName="Graduate Professional Studies"
+                          EntryURL="www.brandeis.edu/gps"
+                          EntryIcon="browser"
+                          />
+            </vm:EntryGroup.Items>
+        </vm:EntryGroup>
+    </vm:EntryGroupModel.Links>
+
+    <vm:EntryGroupModel.Emergencies>
+        <vm:EntryGroup EntryGroupTitle="Emergencies">
+
+        </vm:EntryGroup>
+    </vm:EntryGroupModel.Emergencies>
+</vm:EntryGroupModel>
