@@ -112,11 +112,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\EntryGroupModel.cs" />
-    <Compile Include="ViewModels\ItemViewModel.cs" />
     <Compile Include="ViewModels\Entry.cs" />
-    <Compile Include="ViewModels\EntryGroup.cs" />
-    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\EntryBlock.cs" />
+    <Compile Include="ViewModels\EntryModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -139,10 +137,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <DesignData Include="SampleData\MainViewModelSampleData.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </DesignData>
     <Page Include="SampleData\SampleData.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
