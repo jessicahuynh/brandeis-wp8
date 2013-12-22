@@ -23,15 +23,15 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="{Binding Links.EntryGroupTitle}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="{Binding Links.Title}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <phone:LongListSelector ItemsSource="{Binding Links.Items}">
+            <phone:LongListSelector ItemsSource="{Binding Links.EntryInformation}">
                 <phone:LongListSelector.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel>
+                        <StackPanel Margin="0,0,0,10">
                             <TextBlock Text="{Binding EntryName}" Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap"/>
                             <TextBlock Text="{Binding EntryURL}" Style="{StaticResource PhoneTextSubtleStyle}" />
                         </StackPanel>

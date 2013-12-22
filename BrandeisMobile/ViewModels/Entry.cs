@@ -10,33 +10,16 @@ using System.Windows.Media.Animation;
 
 namespace BrandeisMobile.ViewModels
 {
-    public class Entry : INotifyPropertyChanged
+    public class Entry
     {
-   
-        public Entry(string n, string u = " ", string p = " ", string e = " ", string l = " ")
-        {
-            EntryName = n;
-            EntryURL = u;
-            EntryPhoneNum = p;
-            EntryEmail = e;
-            EntryLocation = l;
-        }
+
 
         public string EntryName { get; set; }
         public string EntryURL { get; set; }
         public string EntryPhoneNum { get; set; }
+        public string EntryFaxNum { get; set; }
         public string EntryEmail { get; set; }
         public string EntryLocation { get; set; }
 
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        private void NotifyPropertyChanged(String propertyName)
-        {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (null != handler)
-            {
-                handler(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
     }
 }

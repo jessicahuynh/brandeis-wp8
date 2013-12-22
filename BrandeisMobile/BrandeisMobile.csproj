@@ -99,6 +99,9 @@
     <Compile Include="Athletics.xaml.cs">
       <DependentUpon>Athletics.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DirectoryLinks.xaml.cs">
+      <DependentUpon>DirectoryLinks.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Links.xaml.cs">
       <DependentUpon>Links.xaml</DependentUpon>
     </Compile>
@@ -126,6 +129,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Athletics.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DirectoryLinks.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

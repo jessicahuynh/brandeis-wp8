@@ -77,5 +77,20 @@ namespace BrandeisMobile
             DirectorySearch.Text = "";
         }
 
+        private void landingNavigation_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            //NavigationService.Navigate(new Uri((Entry)sender.EntryURL,UriKind.Relative);
+        }
+
+        private void CampusServicesButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/DirectoryLinks.xaml?goto=0", UriKind.RelativeOrAbsolute));
+        }
+
+        private void AdmissionsButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/DirectoryLinks.xaml?goto=1", UriKind.RelativeOrAbsolute)); //Admissions is the 2nd pivot
+        }
+
     }
 }

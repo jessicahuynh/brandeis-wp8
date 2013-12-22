@@ -3,7 +3,57 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:vm="clr-namespace:BrandeisMobile.ViewModels">
 
-    <!--<vm:EntryBlock EntryGroupName="home">
-        <vm:Entry EntryName="athletics" />
-    </vm:EntryBlock>-->
+    <vm:EntryModel.LandingPage>
+        <vm:EntryBlock Title="home">
+            <vm:EntryBlock.EntryInformation>
+                <vm:Entry EntryName="library" />
+                <vm:Entry EntryName="athletics" EntryURL="/athletics.xaml"/>
+                <vm:Entry EntryName="dining" />
+                <vm:Entry EntryName="photos" />
+                <vm:Entry EntryName="video" />
+                <vm:Entry EntryName="social" />
+            </vm:EntryBlock.EntryInformation>
+        </vm:EntryBlock>
+    </vm:EntryModel.LandingPage>
+    
+    <vm:EntryModel.Links>
+        <vm:EntryBlock Title="links">
+            <vm:EntryBlock.EntryInformation>
+                <vm:Entry EntryName="Admissions, Undergraduate" EntryURL="www.brandeis.edu/admissions" />
+                <vm:Entry EntryName="Graduate Professional Studies" EntryURL="www.brandeis.edu/gps" />
+                <vm:Entry EntryName="Graduate School of Arts and Sciences" EntryURL="www.brandeis.edu/gsas" />
+                <vm:Entry EntryName="The Heller School" EntryURL="heller.brandeis.edu" />
+            </vm:EntryBlock.EntryInformation>
+        </vm:EntryBlock>
+    </vm:EntryModel.Links>
+    
+    <vm:EntryModel.Emergencies>
+        <vm:EntryBlock Title="emergencies">
+            <vm:EntryBlock.EntryInformation>
+                <vm:Entry EntryName="Campus Emergencies" EntryPhoneNum="781-736-3333" />
+                <vm:Entry EntryName="Campus Nonemergencies (Public Safety)" EntryPhoneNum="781-736-5000" />
+                <vm:Entry EntryName="Health Center" EntryPhoneNum="781-736-3677" />
+            </vm:EntryBlock.EntryInformation>
+        </vm:EntryBlock>
+    </vm:EntryModel.Emergencies>
+    
+    <vm:EntryModel.CampusServices>
+        <vm:EntryBlock Title="campus services">
+            <vm:EntryBlock.EntryInformation>
+                <vm:Entry EntryName="BranVan" EntryPhoneNum="781-736-4999" />
+                <vm:Entry EntryName="Dial by Name" EntryPhoneNum="781-736-5555" />
+                <vm:Entry EntryName="Technology Help Desk" EntryPhoneNum="781-736-4357" EntryLocation="Goldfarb Library" />
+                <vm:Entry EntryName="Voicemail" EntryPhoneNum="781-736-2222" />
+            </vm:EntryBlock.EntryInformation>
+        </vm:EntryBlock>
+    </vm:EntryModel.CampusServices>
+    
+    <vm:EntryModel.Admissions>
+        <vm:EntryBlock Title="admissions">
+            <vm:EntryBlock.EntryInformation>
+                <vm:Entry EntryName="Undergraduate" EntryLocation="Shapiro Admissions Center" EntryPhoneNum="781-736-3500" EntryFaxNum="781-736-3525" EntryEmail="admissions@brandeis.edu" />
+                <vm:Entry EntryName="Graduate School of Arts and Sciences" EntryLocation="Kutz Hall, Room 219" EntryPhoneNum="781-736-3410" EntryFaxNum="781-736-3412" EntryEmail="gradschool@brandeis.edu" />
+            </vm:EntryBlock.EntryInformation>
+        </vm:EntryBlock>
+    </vm:EntryModel.Admissions>
 </vm:EntryModel>
