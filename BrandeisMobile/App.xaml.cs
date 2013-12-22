@@ -254,5 +254,14 @@ namespace BrandeisMobile
                 throw;
             }
         }
+
+
+        // Some app-wide methods
+        public static void OpenInBrowser(string url)
+        {
+            Microsoft.Phone.Tasks.WebBrowserTask wbt = new Microsoft.Phone.Tasks.WebBrowserTask();
+            wbt.Uri = new Uri(url);
+            wbt.Show();
+        }
     }
 }

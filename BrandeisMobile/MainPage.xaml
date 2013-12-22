@@ -40,18 +40,18 @@
                 Panorama item one - home/landing page
             -->
             <phone:PanoramaItem Header="{Binding LandingPage.Title}">
-                <phone:LongListSelector 
+                <phone:LongListSelector x:Name="MainLongListSelector"
                     ItemsSource="{Binding LandingPage.EntryInformation}" 
-                    ItemTemplate="{StaticResource jumpingLinks}" />
+                    ItemTemplate="{StaticResource jumpingLinks}" SelectionChanged="MainLongListSelector_SelectionChanged"/>
             </phone:PanoramaItem>
 
             <!--
                 Panorama item two - news
             -->
             <phone:PanoramaItem Header="{Binding NewsPage.Title}">
-                <phone:LongListSelector 
+                <phone:LongListSelector x:Name="NewsLongListSelector"
                     ItemsSource="{Binding NewsPage.EntryInformation}" 
-                    ItemTemplate="{StaticResource jumpingLinks}" />
+                    ItemTemplate="{StaticResource jumpingLinks}" SelectionChanged="NewsLongListSelector_SelectionChanged"/>
                     <!--<phone:LongListSelector.ListHeaderTemplate>
                         <DataTemplate>
                             <Grid Margin="12,0,0,38">

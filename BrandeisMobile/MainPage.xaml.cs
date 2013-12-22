@@ -74,7 +74,7 @@ namespace BrandeisMobile
 
         private void full_websiteMenuItem_Click(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("http://www.brandeis.edu/", UriKind.Absolute));
+            App.OpenInBrowser("http://www.brandeis.edu/");
         }
 
         private void aboutMenuItem_Click(object sender, EventArgs e)
@@ -104,6 +104,21 @@ namespace BrandeisMobile
         private void CampusLocationsButton_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("/DirectoryLinks.xaml?goto=2", UriKind.RelativeOrAbsolute));
+        }
+
+        private void MainLongListSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void NewsLongListSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (NewsLongListSelector.SelectedItem == null)
+                return;
+
+            this.NavigationService.Navigate(new Uri("/News.xaml?selectedItem=" + App.ViewModel.NewsPage.EntryInformation.IndexOf(NewsLongListSelector.SelectedItem as ViewModels.Entry), UriKind.Relative));
+
+            NewsLongListSelector.SelectedItem = null;
         }
 
     }

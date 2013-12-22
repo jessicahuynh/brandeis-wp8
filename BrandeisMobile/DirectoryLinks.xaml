@@ -71,19 +71,19 @@
                     <phone:LongListSelector ItemsSource="{Binding CampusLocations.EntryInformation}">
                         <phone:LongListSelector.ItemTemplate>
                             <DataTemplate>
-                                <StackPanel>
-                                    <TextBlock Text="{Binding EntryName}" Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap"/>
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="*" />
-                                        </Grid.ColumnDefinitions>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Text="{Binding EntryName}" Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap" Grid.Row="0"/>
+                                    <Grid Grid.Row="1">
                                         <TextBlock Text="{Binding EntryLocation}" Style="{StaticResource PhoneTextBlockBase}" HorizontalAlignment="Left"/>
-                                        <StackPanel Orientation="Horizontal" Grid.Column="1">
-                                            <TextBlock Text="{Binding EntryURL}" Style="{StaticResource PhoneTextBlockBase}" HorizontalAlignment="Right"/>
-                                        </StackPanel>
+                                        <TextBlock Text="{Binding EntryURL}" Style="{StaticResource PhoneTextBlockBase}" HorizontalAlignment="Right"/>
                                     </Grid>
-                                    <Grid>
+                                    <Grid Grid.Row="2">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="1*"/>
                                             <ColumnDefinition Width="1*" />
@@ -94,8 +94,8 @@
                                             <TextBlock Text="{Binding EntryFaxNum}" HorizontalAlignment="Right" Style="{StaticResource PhoneTextSubtleStyle}" />
                                         </StackPanel>
                                     </Grid>
-                                    <TextBlock Text="{Binding EntryEmail}" Style="{StaticResource DeisBlueColor}" TextWrapping="Wrap"/>
-                                </StackPanel>
+                                    <TextBlock Text="{Binding EntryEmail}" Style="{StaticResource DeisBlueColor}" TextWrapping="Wrap" Grid.Row="3"/>
+                                </Grid>
                             </DataTemplate>
                         </phone:LongListSelector.ItemTemplate>
                     </phone:LongListSelector>

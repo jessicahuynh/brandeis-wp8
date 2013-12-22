@@ -22,24 +22,6 @@ namespace BrandeisMobile.ViewModels
 
         public EntryBlock NewsFeatures { get; set; }
 
-        
-        /// <summary>
-        /// Sample ViewModel property; this property is used in the view to display its value using a Binding
-        /// </summary>
-        /// <returns></returns>
-        public string SampleProperty { get; set; }
-
-        /// <summary>
-        /// Sample property that returns a localized string
-        /// </summary>
-        public string LocalizedSampleProperty
-        {
-            get
-            {
-                return AppResources.SampleProperty;
-            }
-        }
-
         public bool IsDataLoaded { get; set; }
              
 
@@ -47,6 +29,7 @@ namespace BrandeisMobile.ViewModels
         {
             LandingPage = CreateLandingPageList();
             NewsPage = CreateNewsPageList();
+            Emergencies = CreateEmergenciesList();
 
             Links = CreateLinksPageList();
 
@@ -91,6 +74,18 @@ namespace BrandeisMobile.ViewModels
             data.EntryInformation.Add(new Entry { EntryName = "student life" });
             data.EntryInformation.Add(new Entry { EntryName = "blog: president Fred Lawrence" });
             data.EntryInformation.Add(new Entry { EntryName = "blog: science @ brandeis" });
+
+            return data;
+        }
+
+        private EntryBlock CreateEmergenciesList()
+        {
+            EntryBlock data = new EntryBlock();
+            data.Title = "emergencies";
+
+            data.EntryInformation.Add(new Entry { EntryName = "Campus Emergencies", EntryPhoneNum = "781-736-3333" });
+            data.EntryInformation.Add(new Entry { EntryName = "Campus Nonemergencies (Public Safety)", EntryPhoneNum = "781-736-5000" });
+            data.EntryInformation.Add(new Entry { EntryName = "Health Center", EntryPhoneNum = "781-736-3677" });
 
             return data;
         }
@@ -196,6 +191,16 @@ namespace BrandeisMobile.ViewModels
             data.EntryInformation.Add(new Entry { EntryName = "Brandeis Tickets", EntryLocation = "SCC", EntryPhoneNum = "781-736-3400", EntryURL = "go.brandeis.edu/BrandeisTickets" });
             data.EntryInformation.Add(new Entry { EntryName = "Community Living", EntryLocation = "Usdan Student Center", EntryPhoneNum = "781-736-5060" });
             data.EntryInformation.Add(new Entry { EntryName = "Conference and Events", EntryLocation = "Kutz Hall, Room 9", EntryPhoneNum = "781-736-4300", EntryFaxNum = "781-736-4318", EntryEmail = "ces@brandeis.edu" });
+            data.EntryInformation.Add(new Entry { EntryName = "Custodial Services", EntryLocation = "Epstein Building", EntryPhoneNum = "781-736-4365" });
+            data.EntryInformation.Add(new Entry { EntryName = "Facilities", EntryLocation = "Epstein Building", EntryPhoneNum = "781-736-8500" });
+            data.EntryInformation.Add(new Entry { EntryName = "Health Center", EntryLocation = "Stoneman Infirmary", EntryPhoneNum = "781-736-3677" });
+            data.EntryInformation.Add(new Entry { EntryName = "Hiatt Career Center", EntryLocation = "Usdan Student Center", EntryPhoneNum = "781-736-3618", EntryFaxNum = "781-736-3622", EntryEmail = "hiatt@brandeis.edu" });
+            data.EntryInformation.Add(new Entry { EntryName = "Human Resources", EntryLocation = "Bernstein Marcus, 2nd floor", EntryPhoneNum = "781-736-4474", EntryFaxNum = "781-736-4466" });
+            data.EntryInformation.Add(new Entry { EntryName = "Mail Services", EntryLocation = "Usdan Student Center", EntryPhoneNum = "781-736-4236" });
+            data.EntryInformation.Add(new Entry { EntryName = "Student Academic Services", EntryLocation = "Usdan Student Center", EntryPhoneNum = "781-736-3470", EntryFaxNum = "781-736-8710" });
+            data.EntryInformation.Add(new Entry { EntryName = "Student Financial Services", EntryLocation = "Usdan Student Center", EntryPhoneNum = "781-736-3700", EntryFaxNum = "781-736-3719", EntryEmail = "sfs@brandeis.edu" });
+            data.EntryInformation.Add(new Entry { EntryName = "Registrar", EntryLocation = "Kutz Hall, Room 124", EntryPhoneNum = "781-736-2010", EntryFaxNum = "781-736-3485", EntryEmail = "registrar@brandeis.edu" });
+            data.EntryInformation.Add(new Entry { EntryName = "Rose Art Museum", EntryLocation="Loop Road", EntryPhoneNum = "781-736-3434", EntryFaxNum = "781-736-3439" });
 
             return data;
         }

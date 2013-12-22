@@ -18,5 +18,10 @@ namespace BrandeisMobile
 
             DataContext = App.ViewModel;
         }
+
+        private void LongListSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            App.OpenInBrowser("");
+        }
     }
 }
