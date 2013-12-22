@@ -31,7 +31,7 @@
             <phone:LongListSelector ItemsSource="{Binding Links.EntryInformation}">
                 <phone:LongListSelector.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="0,0,0,10">
+                        <StackPanel>
                             <TextBlock Text="{Binding EntryName}" Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap"/>
                             <TextBlock Text="{Binding EntryURL}" Style="{StaticResource PhoneTextSubtleStyle}" />
                         </StackPanel>

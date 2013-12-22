@@ -28,7 +28,10 @@ namespace BrandeisMobile
             {
                 // Delay creation of the view model until necessary
                 if (viewModel == null)
+                {
                     viewModel = new EntryModel();
+                    viewModel.LoadData(); // do this to get headers to show up
+                }
 
                 return viewModel;
             }

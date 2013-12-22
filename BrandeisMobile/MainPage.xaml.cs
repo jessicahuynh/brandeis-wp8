@@ -27,12 +27,22 @@ namespace BrandeisMobile
             ApplicationBar.IsMenuEnabled = true;
             ApplicationBar.BackgroundColor = DeisBlueColor;
             ApplicationBar.ForegroundColor = Color.FromArgb(255, 255, 255, 255); //white
-     
+
+            ApplicationBarIconButton searchIcon = new ApplicationBarIconButton();
+            searchIcon.IconUri = new Uri("/Images/feature.search.png", UriKind.Relative);
+            searchIcon.Text = "search";
+            ApplicationBar.Buttons.Add(searchIcon);
+            
             ApplicationBarIconButton linksIcon = new ApplicationBarIconButton();
             linksIcon.IconUri = new Uri("/Images/favs.png", UriKind.Relative);
             linksIcon.Text = "links";
             ApplicationBar.Buttons.Add(linksIcon);
             linksIcon.Click += new EventHandler(linksIcon_Click);
+
+            ApplicationBarIconButton settingsIcon = new ApplicationBarIconButton();
+            settingsIcon.IconUri = new Uri("/Images/feature.settings.png", UriKind.Relative);
+            settingsIcon.Text = "settings";
+            ApplicationBar.Buttons.Add(settingsIcon);
             
             ApplicationBarMenuItem full_websiteMenuItem = new ApplicationBarMenuItem();
             full_websiteMenuItem.Text = "full website";
@@ -44,7 +54,7 @@ namespace BrandeisMobile
             ApplicationBar.MenuItems.Add(aboutMenuItem);
             aboutMenuItem.Click += new EventHandler(aboutMenuItem_Click);
 
-            // Set the data context of the listbox control to the sample data
+            // Set the data context
             DataContext = App.ViewModel;
         }
 
@@ -64,7 +74,7 @@ namespace BrandeisMobile
 
         private void full_websiteMenuItem_Click(object sender, EventArgs e)
         {
-            
+            NavigationService.Navigate(new Uri("http://www.brandeis.edu/", UriKind.Absolute));
         }
 
         private void aboutMenuItem_Click(object sender, EventArgs e)
@@ -77,11 +87,10 @@ namespace BrandeisMobile
             DirectorySearch.Text = "";
         }
 
-        private void landingNavigation_Tap(object sender, System.Windows.Input.GestureEventArgs e)
-        {
-            //NavigationService.Navigate(new Uri((Entry)sender.EntryURL,UriKind.Relative);
-        }
-
+        // Methods to navigate to specific pivot pages
+        // 0 - Campus services
+        // 1 - Admissions
+        // 2 - Campus locations
         private void CampusServicesButton_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("/DirectoryLinks.xaml?goto=0", UriKind.RelativeOrAbsolute));
@@ -89,7 +98,12 @@ namespace BrandeisMobile
 
         private void AdmissionsButton_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/DirectoryLinks.xaml?goto=1", UriKind.RelativeOrAbsolute)); //Admissions is the 2nd pivot
+            this.NavigationService.Navigate(new Uri("/DirectoryLinks.xaml?goto=1", UriKind.RelativeOrAbsolute));
+        }
+
+        private void CampusLocationsButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/DirectoryLinks.xaml?goto=2", UriKind.RelativeOrAbsolute));
         }
 
     }

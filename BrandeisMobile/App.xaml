@@ -19,7 +19,11 @@
         <local:LocalizedStrings xmlns:local="clr-namespace:BrandeisMobile" x:Key="LocalizedStrings"/>
         
         <SolidColorBrush x:Key="DeisBlue" Color="#FF0070FF" />
-        <Color x:Key="DeisBlueColor">#FF0070FF</Color>
+        <Style x:Key="DeisBlueColor" BasedOn="{StaticResource PhoneTextBlockBase}" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilySemiBold}"/>
+            <Setter Property="Foreground" Value="{StaticResource DeisBlue}"/>
+        </Style>
+
     </Application.Resources>
 
     <Application.ApplicationLifetimeObjects>

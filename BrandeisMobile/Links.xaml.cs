@@ -15,6 +15,8 @@ namespace BrandeisMobile
         public Links()
         {
             InitializeComponent();
+
+            DataContext = App.ViewModel;
         }
     }
 }

@@ -21,5 +21,8 @@ namespace BrandeisMobile.ViewModels
         public string EntryEmail { get; set; }
         public string EntryLocation { get; set; }
 
+        public string EntryNewsHeadline { get; set; }
+        public string EntryNewsDescription { get; set; }
+        public string EntryNewsPicture { get; set; }
     }
 }

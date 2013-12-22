@@ -38,7 +38,7 @@
     </vm:EntryModel.Emergencies>
     
     <vm:EntryModel.CampusServices>
-        <vm:EntryBlock Title="campus services">
+        <vm:EntryBlock Title="services">
             <vm:EntryBlock.EntryInformation>
                 <vm:Entry EntryName="BranVan" EntryPhoneNum="781-736-4999" />
                 <vm:Entry EntryName="Dial by Name" EntryPhoneNum="781-736-5555" />
@@ -56,4 +56,45 @@
             </vm:EntryBlock.EntryInformation>
         </vm:EntryBlock>
     </vm:EntryModel.Admissions>
+    
+    <vm:EntryModel.CampusLocations>
+        <vm:EntryBlock Title="locations">
+            <vm:EntryBlock.EntryInformation>
+                <vm:Entry EntryName="Mailing Address" EntryLocation="415 South St. Waltham, MA 02453-2578" EntryPhoneNum="781-736-2000" />
+                <vm:Entry EntryName="Alumni Relations" EntryLocation="Bernstein Marcus" EntryPhoneNum="800-333-1948" />
+                <vm:Entry EntryName="Athletics" EntryLocation="Gosman Sports and Convocations Center" EntryPhoneNum="781-736-3630" />
+                <vm:Entry EntryName="Brandeis Bookstore" EntryLocation="Shapiro Campus Center" EntryPhoneNum="781-736-4272" EntryFaxNum="781-736-4895"/>
+                <vm:Entry EntryName="Brandeis Tickets" EntryLocation="SCC" EntryPhoneNum="781-736-3400" EntryURL="go.brandeis.edu/BrandeisTickets" />
+            </vm:EntryBlock.EntryInformation>
+        </vm:EntryBlock>
+    </vm:EntryModel.CampusLocations>
+    
+    <vm:EntryModel.NewsPage>
+        <vm:EntryBlock Title="news">
+            <vm:EntryBlock.EntryInformation>
+                <vm:Entry EntryName="features" />
+                <vm:Entry EntryName="in the news" />
+                <vm:Entry EntryName="around campus" />
+                <vm:Entry EntryName="alumni" />
+                <vm:Entry EntryName="arts" />
+                <vm:Entry EntryName="athletics" />
+                <vm:Entry EntryName="business" />
+                <vm:Entry EntryName="humanities &amp; social sciences" />
+                <vm:Entry EntryName="international affairs" />
+                <vm:Entry EntryName="research" />
+                <vm:Entry EntryName="science &amp; technology" />
+                <vm:Entry EntryName="student life" />
+                <vm:Entry EntryName="blog: president Fred Lawrence" />
+                <vm:Entry EntryName="blog: science at Brandeis" />
+            </vm:EntryBlock.EntryInformation>
+        </vm:EntryBlock>
+    </vm:EntryModel.NewsPage>
+    
+    <vm:EntryModel.NewsFeatures>
+        <vm:EntryBlock Title="headlines">
+            <vm:EntryBlock.EntryInformation>
+                <vm:Entry EntryNewsHeadline="Magazine Promotes Wanderlust" EntryNewsDescription="&quot;We hope the magazine transports readers to other places...&quot;" />
+            </vm:EntryBlock.EntryInformation>
+        </vm:EntryBlock>
+    </vm:EntryModel.NewsFeatures>
 </vm:EntryModel>
