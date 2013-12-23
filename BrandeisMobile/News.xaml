@@ -35,13 +35,73 @@
         <!--Pivot Control-->
         <phone:Pivot Title="NEWS" x:Name="NewsPivot">
             <!--Pivot item one-->
-            <phone:PivotItem Header="features">
+            <phone:PivotItem Header="{Binding NewsFeatures.Title}">
                 <phone:LongListSelector ItemTemplate="{StaticResource articlesList}" ItemsSource="{Binding NewsFeatures.EntryInformation}"/>
             </phone:PivotItem>
 
             <!--Pivot item two-->
             <phone:PivotItem Header="in the news">
                 <phone:LongListSelector ItemTemplate="{StaticResource articlesList}"/>
+            </phone:PivotItem>
+            
+            <!--Pivot item three-->
+            <phone:PivotItem Header="around campus">
+                <phone:LongListSelector ItemTemplate="{StaticResource articlesList}" />
+            </phone:PivotItem>
+            
+            <!--Pivot item four-->
+            <phone:PivotItem Header="alumni">
+                <phone:LongListSelector ItemTemplate="{StaticResource articlesList}" />
+            </phone:PivotItem>
+            
+            <!--Pivot item five-->
+            <phone:PivotItem Header="arts">
+                <phone:LongListSelector ItemTemplate="{StaticResource articlesList}" />
+            </phone:PivotItem>
+            
+            <!--Pivot item six-->
+            <phone:PivotItem Header="athletics">
+                <phone:LongListSelector ItemTemplate="{StaticResource articlesList}" />
+            </phone:PivotItem>
+            
+            <!--Pivot item seven-->
+            <phone:PivotItem Header="business">
+                <phone:LongListSelector ItemTemplate="{StaticResource articlesList}" />
+            </phone:PivotItem>
+            
+            <!--Pivot item eight-->
+            <phone:PivotItem Header="humanities and social sciences">
+                <phone:LongListSelector ItemTemplate="{StaticResource articlesList}" />
+            </phone:PivotItem>
+            
+            <!--Pivot item nine-->
+            <phone:PivotItem Header="int'l affairs">
+                <phone:LongListSelector ItemTemplate="{StaticResource articlesList}" />
+            </phone:PivotItem>
+            
+            <!--Pivot item ten-->
+            <phone:PivotItem Header="research">
+                <phone:LongListSelector ItemTemplate="{StaticResource articlesList}" />
+            </phone:PivotItem>
+            
+            <!--Pivot item eleven-->
+            <phone:PivotItem Header="science and tech">
+                <phone:LongListSelector ItemTemplate="{StaticResource articlesList}" />
+            </phone:PivotItem>
+            
+            <!--Pivot item twelve-->
+            <phone:PivotItem Header="student life">
+                <phone:LongListSelector ItemTemplate="{StaticResource articlesList}" />
+            </phone:PivotItem>
+            
+            <!--Pivot item thirteen-->
+            <phone:PivotItem Header="Fred Lawrence">
+                <phone:LongListSelector ItemTemplate="{StaticResource articlesList}" />
+            </phone:PivotItem>
+            
+            <!--Pivot item fourteen-->
+            <phone:PivotItem Header="science @ Brandeis">
+                <phone:LongListSelector ItemTemplate="{StaticResource articlesList}" />
             </phone:PivotItem>
         </phone:Pivot>
     </Grid>

@@ -19,15 +19,11 @@ namespace BrandeisMobile
         {
             InitializeComponent();
 
-            Color DeisBlueColor = Color.FromArgb(255, 0, 112, 255);
-
             ApplicationBar = ThemeManager.CreateApplicationBar();
             ApplicationBar.Mode = ApplicationBarMode.Minimized;
             ApplicationBar.Opacity = .8;
             ApplicationBar.IsVisible = true;
             ApplicationBar.IsMenuEnabled = true;
-            ApplicationBar.BackgroundColor = DeisBlueColor;
-            ApplicationBar.ForegroundColor = Color.FromArgb(255, 255, 255, 255); //white
 
             ApplicationBarIconButton searchIcon = new ApplicationBarIconButton();
             searchIcon.IconUri = new Uri("/Images/feature.search.png", UriKind.Relative);
@@ -123,7 +119,8 @@ namespace BrandeisMobile
             if (NewsLongListSelector.SelectedItem == null)
                 return;
 
-            this.NavigationService.Navigate(new Uri("/News.xaml?goto=" + App.ViewModel.NewsPage.EntryInformation.IndexOf((ViewModels.Entry)NewsLongListSelector.SelectedItem), UriKind.Relative));
+            var list = App.ViewModel.NewsPage.EntryInformation;
+            this.NavigationService.Navigate(new Uri("/News.xaml?goto=" + list.IndexOf((ViewModels.Entry)NewsLongListSelector.SelectedItem), UriKind.Relative));
 
             NewsLongListSelector.SelectedItem = null;
         }

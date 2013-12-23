@@ -45,12 +45,12 @@ namespace BrandeisMobile.ViewModels
             EntryBlock data = new EntryBlock();
             data.Title = "home";
 
-            data.EntryInformation.Add(new Entry { EntryName = "library" });
-            data.EntryInformation.Add(new Entry { EntryName = "athletics", EntryURL="/athletics.xaml" });
+            data.EntryInformation.Add(new Entry { EntryName = "library", EntryURL="/LibraryPage.xaml" });
+            data.EntryInformation.Add(new Entry { EntryName = "athletics", EntryURL="/Athletics.xaml" });
             data.EntryInformation.Add(new Entry { EntryName = "dining" });
-            data.EntryInformation.Add(new Entry { EntryName = "photos" });
-            data.EntryInformation.Add(new Entry { EntryName = "video" });
-            data.EntryInformation.Add(new Entry { EntryName = "social" });
+            data.EntryInformation.Add(new Entry { EntryName = "photos", EntryURL="/Photos.xaml" });
+            data.EntryInformation.Add(new Entry { EntryName = "video", EntryURL="/Video.xaml" });
+            data.EntryInformation.Add(new Entry { EntryName = "social", EntryURL="/Social.xaml" });
 
             return data;
         }
