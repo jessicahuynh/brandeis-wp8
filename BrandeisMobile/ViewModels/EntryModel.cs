@@ -78,6 +78,15 @@ namespace BrandeisMobile.ViewModels
             return data;
         }
 
+        private EntryBlock CreateNewsFeatures()
+        {
+            EntryBlock data = new EntryBlock();
+            data.Title = "features";
+            
+
+            return data;
+        }
+
         private EntryBlock CreateEmergenciesList()
         {
             EntryBlock data = new EntryBlock();
@@ -204,5 +213,6 @@ namespace BrandeisMobile.ViewModels
 
             return data;
         }
+
     }
 }

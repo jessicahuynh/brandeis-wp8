@@ -30,7 +30,9 @@
             <StackPanel>
                 <RichTextBox IsReadOnly="True">
                     <Paragraph>
-                        This application is not affiliated with     Brandeis University. It is not official, use at your own risk.
+                        This application is not affiliated with     Brandeis University. Photos are taken from the official Brandeis
+                        <Hyperlink NavigateUri="http://www.flickr.com/people/39726096@N05" TargetName="_blank" Foreground="{StaticResource DeisBlue}">Flickr</Hyperlink>
+                        account.
                     </Paragraph>
                     <Paragraph />
                     <Paragraph>
@@ -43,7 +45,18 @@
                     </Paragraph>
                 </RichTextBox>
                 <Button Content="donate!"
-                        Margin="0,40,0,0"/>
+                        Margin="0,40,0,40"/>
+                <RichTextBox IsReadOnly="True">
+                    <Paragraph>
+                        This app uses the
+                        <Hyperlink NavigateUri="http://www.nuget.org/packages/Microsoft.Net.Http" TargetName="_blank" Foreground="{StaticResource DeisBlue}">HttpClient package</Hyperlink>
+                        by Microsoft, the
+                        <Hyperlink NavigateUri="http://www.nuget.org/packages/PhoneThemeManager/" TargetName="_blank" Foreground="{StaticResource DeisBlue}">Windows Phone Theme Manager package</Hyperlink>
+                        by Jeff Wilcox, and the
+                        <Hyperlink NavigateUri="http://www.nuget.org/packages/newtonsoft.json/" TargetName="_blank" Foreground="{StaticResource DeisBlue}">JSON.Net framework</Hyperlink>
+                        by James Newton-King.
+                    </Paragraph>
+                </RichTextBox>
             </StackPanel>
         </Grid>
     </Grid>
