@@ -21,7 +21,13 @@ namespace BrandeisMobile
 
         private void LongListSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            App.OpenInBrowser("");
+            if (LinksPanel.SelectedItem == null)
+                return;
+            
+            ViewModels.Entry selected = (ViewModels.Entry)LinksPanel.SelectedItem;
+            App.OpenInBrowser("http://" + selected.EntryURL);
+
+            LinksPanel.SelectedItem = null;
         }
     }
 }

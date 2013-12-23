@@ -15,6 +15,8 @@ namespace BrandeisMobile
         public News()
         {
             InitializeComponent();
+
+            DataContext = App.ViewModel;
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -23,12 +25,11 @@ namespace BrandeisMobile
             {
                 string selectedIndex = "";
 
-                if (NavigationContext.QueryString.TryGetValue("selectedItem", out selectedIndex))
-                {
+                if (NavigationContext.QueryString.TryGetValue("goto", out selectedIndex))
                     NewsPivot.SelectedIndex = Convert.ToInt32(selectedIndex);
-                }
-            }
 
+                base.OnNavigatedTo(e);
+            }
         }
     }
 }

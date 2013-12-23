@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using Microsoft.Phone.Tasks;
 
 namespace BrandeisMobile
 {
@@ -108,7 +109,13 @@ namespace BrandeisMobile
 
         private void MainLongListSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (MainLongListSelector.SelectedItem == null)
+                return;
 
+            ViewModels.Entry selected = (ViewModels.Entry)MainLongListSelector.SelectedItem;
+            this.NavigationService.Navigate(new Uri(selected.EntryURL, UriKind.RelativeOrAbsolute));
+
+           MainLongListSelector.SelectedItem = null;
         }
 
         private void NewsLongListSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -116,9 +123,25 @@ namespace BrandeisMobile
             if (NewsLongListSelector.SelectedItem == null)
                 return;
 
-            this.NavigationService.Navigate(new Uri("/News.xaml?selectedItem=" + App.ViewModel.NewsPage.EntryInformation.IndexOf(NewsLongListSelector.SelectedItem as ViewModels.Entry), UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("/News.xaml?goto=" + App.ViewModel.NewsPage.EntryInformation.IndexOf((ViewModels.Entry)NewsLongListSelector.SelectedItem), UriKind.Relative));
 
             NewsLongListSelector.SelectedItem = null;
+        }
+
+        private void EmergenciesPanel_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (EmergenciesPanel.SelectedItem == null)
+                return;
+
+            var phoneCall = new PhoneCallTask();
+            ViewModels.Entry selected = (ViewModels.Entry)EmergenciesPanel.SelectedItem;
+
+            phoneCall.DisplayName = selected.EntryName;
+            phoneCall.PhoneNumber = selected.EntryPhoneNum;
+
+            phoneCall.Show();
+
+            EmergenciesPanel.SelectedItem = null;
         }
 
     }

@@ -7,11 +7,28 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    d:DataContext="{d:DesignData SampleData/SampleData.xaml}"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="False">
+    
+    <phone:PhoneApplicationPage.Resources>
+        <DataTemplate x:Key="articlesList">
+            <StackPanel Orientation="Horizontal" Margin="12,2,0,4" Height="105" Width="463">
+                <Border BorderThickness="1" Width="99" Height="99" BorderBrush="{StaticResource DeisBlue}" Background="{StaticResource DeisBlue}"/>
+                <Grid Margin="8,-7,0,0" Width="342">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="{Binding EntryNewsHeadline}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextTitle3Style}" Grid.Row="0"/>
+                    <TextBlock Text="{Binding EntryNewsDescription}" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" Grid.Row="1"/>
+                </Grid>
+            </StackPanel>
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -19,12 +36,12 @@
         <phone:Pivot Title="NEWS" x:Name="NewsPivot">
             <!--Pivot item one-->
             <phone:PivotItem Header="features">
-                <Grid/>
+                <phone:LongListSelector ItemTemplate="{StaticResource articlesList}" ItemsSource="{Binding NewsFeatures.EntryInformation}"/>
             </phone:PivotItem>
 
             <!--Pivot item two-->
             <phone:PivotItem Header="in the news">
-                <Grid/>
+                <phone:LongListSelector ItemTemplate="{StaticResource articlesList}"/>
             </phone:PivotItem>
         </phone:Pivot>
     </Grid>

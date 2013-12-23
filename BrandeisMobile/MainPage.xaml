@@ -51,35 +51,8 @@
             <phone:PanoramaItem Header="{Binding NewsPage.Title}">
                 <phone:LongListSelector x:Name="NewsLongListSelector"
                     ItemsSource="{Binding NewsPage.EntryInformation}" 
-                    ItemTemplate="{StaticResource jumpingLinks}" SelectionChanged="NewsLongListSelector_SelectionChanged"/>
-                    <!--<phone:LongListSelector.ListHeaderTemplate>
-                        <DataTemplate>
-                            <Grid Margin="12,0,0,38">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="*"/>
-                                </Grid.RowDefinitions>
-                                <TextBlock Text="{Binding News.Title}"
-									Style="{StaticResource PanoramaItemHeaderTextStyle}"
-									Grid.Row="0"
-                                           />
-                            </Grid>
-                        </DataTemplate>
-                    </phone:LongListSelector.ListHeaderTemplate>
-                    <phone:LongListSelector.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Horizontal" Margin="12,2,0,4" Height="105" Width="432">
-                                //Replace rectangle with image
-                                <Border BorderThickness="1" Width="99" Height="99" BorderBrush="#FFFFC700" Background="#FFFFC700"/>
-                                <StackPanel Width="311" Margin="8,-7,0,0">
-                                    <TextBlock Text="{Binding EntryNewsHeadline}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
-                                    <TextBlock Text="{Binding EntryNewsDescription}" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
-                                </StackPanel>
-                            </StackPanel>
-                        </DataTemplate>
-                    </phone:LongListSelector.ItemTemplate>
-                </phone:LongListSelector>-->
-                
+                    ItemTemplate="{StaticResource jumpingLinks}"
+                  SelectionChanged="NewsLongListSelector_SelectionChanged"/>
             </phone:PanoramaItem>
 
             <!--
@@ -117,12 +90,12 @@
                 Panorama item six - emergency
             -->
             <phone:PanoramaItem Header="{Binding Emergencies.Title}">
-                <phone:LongListSelector ItemsSource="{Binding Emergencies.EntryInformation}">
+                <phone:LongListSelector x:Name="EmergenciesPanel" ItemsSource="{Binding Emergencies.EntryInformation}" SelectionChanged="EmergenciesPanel_SelectionChanged">
                     <phone:LongListSelector.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Margin="0,0,0,10">
                                 <TextBlock Text="{Binding EntryName}" Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap"/>
-                                <TextBlock Text="{Binding EntryPhoneNum}" Style="{StaticResource PhoneTextSubtleStyle}" />
+                                <TextBlock Text="{Binding EntryPhoneNum}" Style="{StaticResource DeisBlueColor}" />
                             </StackPanel>
                         </DataTemplate>
                     </phone:LongListSelector.ItemTemplate>

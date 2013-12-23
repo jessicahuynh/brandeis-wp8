@@ -21,13 +21,13 @@
             <!--Pivot item one-->
             <phone:PivotItem x:Name="CampusServices" Header="{Binding CampusServices.Title}">
                 <Grid x:Name="CampusServicesPanel" Grid.Row="1" Margin="12,0,12,0">
-                    <phone:LongListSelector ItemsSource="{Binding CampusServices.EntryInformation}">
+                    <phone:LongListSelector x:Name="ServicesPanel" ItemsSource="{Binding CampusServices.EntryInformation}" SelectionChanged="ServicesPanel_SelectionChanged">
                         <phone:LongListSelector.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel>
                                     <TextBlock Text="{Binding EntryName}" Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap"/>
                                     <Grid>
-                                        <TextBlock Text="{Binding EntryPhoneNum}" Style="{StaticResource PhoneTextSubtleStyle}" HorizontalAlignment="Left" />
+                                        <TextBlock Text="{Binding EntryPhoneNum}" Style="{StaticResource DeisBlueColor}" HorizontalAlignment="Left" x:Name="phoneNumber" />
                                         <TextBlock Text="{Binding EntryLocation}" HorizontalAlignment="Right" Style="{StaticResource PhoneTextBlockBase}" />
                                     </Grid>
                                 </StackPanel>
@@ -39,8 +39,8 @@
 
             <!--Pivot item two-->
             <phone:PivotItem x:Name="Admissions" Header="{Binding Admissions.Title}">
-                <Grid x:Name="AdmissionsPanel" Grid.Row="1" Margin="12,0,12,0">
-                    <phone:LongListSelector ItemsSource="{Binding Admissions.EntryInformation}">
+                <Grid Grid.Row="1" Margin="12,0,12,0">
+                    <phone:LongListSelector x:Name="AdmissionsPanel" ItemsSource="{Binding Admissions.EntryInformation}" SelectionChanged="AdmissionsPanel_SelectionChanged">
                         <phone:LongListSelector.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel>
@@ -51,13 +51,13 @@
                                             <ColumnDefinition Width="1*"/>
                                             <ColumnDefinition Width="1*" />
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Text="{Binding EntryPhoneNum}" Style="{StaticResource PhoneTextSubtleStyle}" HorizontalAlignment="Left" />
+                                        <TextBlock Text="{Binding EntryPhoneNum}" Style="{StaticResource DeisBlueColor}" HorizontalAlignment="Left" />
                                         <StackPanel Orientation="Horizontal" Grid.Column="1">
                                             <TextBlock Text="Fax: " Style="{StaticResource PhoneTextSubtleStyle}" />
                                             <TextBlock Text="{Binding EntryFaxNum}" HorizontalAlignment="Right" Style="{StaticResource PhoneTextSubtleStyle}" />
                                         </StackPanel>
                                     </Grid>
-                                    <TextBlock Text="{Binding EntryEmail}" Style="{StaticResource DeisBlueColor}" />
+                                    <TextBlock Text="{Binding EntryEmail}" Style="{StaticResource PhoneTextSubtleStyle}" />
                                 </StackPanel>
                             </DataTemplate>
                         </phone:LongListSelector.ItemTemplate>
@@ -67,8 +67,8 @@
 
             <!--Pivot item three-->
             <phone:PivotItem x:Name="CampusLocations" Header="{Binding CampusLocations.Title}">
-                <Grid x:Name="CampusLocationsPanel" Grid.Row="1" Margin="12,0,12,0">
-                    <phone:LongListSelector ItemsSource="{Binding CampusLocations.EntryInformation}">
+                <Grid Grid.Row="1" Margin="12,0,12,0">
+                    <phone:LongListSelector x:Name="CampusLocationsPanel" ItemsSource="{Binding CampusLocations.EntryInformation}" SelectionChanged="CampusLocationsPanel_SelectionChanged">
                         <phone:LongListSelector.ItemTemplate>
                             <DataTemplate>
                                 <Grid>
@@ -88,13 +88,13 @@
                                             <ColumnDefinition Width="1*"/>
                                             <ColumnDefinition Width="1*" />
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Text="{Binding EntryPhoneNum}" Style="{StaticResource PhoneTextSubtleStyle}" HorizontalAlignment="Left" />
+                                        <TextBlock Text="{Binding EntryPhoneNum}" Style="{StaticResource DeisBlueColor}" HorizontalAlignment="Left" />
                                         <StackPanel Orientation="Horizontal" Grid.Column="1">
                                             <TextBlock Text="Fax: " Style="{StaticResource PhoneTextSubtleStyle}" />
                                             <TextBlock Text="{Binding EntryFaxNum}" HorizontalAlignment="Right" Style="{StaticResource PhoneTextSubtleStyle}" />
                                         </StackPanel>
                                     </Grid>
-                                    <TextBlock Text="{Binding EntryEmail}" Style="{StaticResource DeisBlueColor}" TextWrapping="Wrap" Grid.Row="3"/>
+                                    <TextBlock Text="{Binding EntryEmail}" Style="{StaticResource PhoneTextSubtleStyle}" TextWrapping="Wrap" Grid.Row="3"/>
                                 </Grid>
                             </DataTemplate>
                         </phone:LongListSelector.ItemTemplate>

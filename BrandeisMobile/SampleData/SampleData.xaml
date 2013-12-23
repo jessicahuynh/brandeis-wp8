@@ -91,9 +91,10 @@
     </vm:EntryModel.NewsPage>
     
     <vm:EntryModel.NewsFeatures>
-        <vm:EntryBlock Title="headlines">
+        <vm:EntryBlock Title="features">
             <vm:EntryBlock.EntryInformation>
                 <vm:Entry EntryNewsHeadline="Magazine Promotes Wanderlust" EntryNewsDescription="&quot;We hope the magazine transports readers to other places...&quot;" />
+                <vm:Entry EntryNewsHeadline="The beat goes on with a new model for artifical flagella" EntryNewsDescription="Michael Hagan, associate professor of physics..."/>
             </vm:EntryBlock.EntryInformation>
         </vm:EntryBlock>
     </vm:EntryModel.NewsFeatures>

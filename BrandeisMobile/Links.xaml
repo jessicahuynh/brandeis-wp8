@@ -28,12 +28,12 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <phone:LongListSelector ItemsSource="{Binding Links.EntryInformation}" SelectionChanged="LongListSelector_SelectionChanged">
+            <phone:LongListSelector x:Name="LinksPanel" ItemsSource="{Binding Links.EntryInformation}" SelectionChanged="LongListSelector_SelectionChanged">
                 <phone:LongListSelector.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
                             <TextBlock Text="{Binding EntryName}" Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding EntryURL}" Style="{StaticResource PhoneTextSubtleStyle}" />
+                            <TextBlock Text="{Binding EntryURL}" Style="{StaticResource DeisBlueColor}" />
                         </StackPanel>
                     </DataTemplate>
                 </phone:LongListSelector.ItemTemplate>
