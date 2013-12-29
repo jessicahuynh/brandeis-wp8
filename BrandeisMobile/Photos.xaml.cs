@@ -38,7 +38,7 @@ namespace BrandeisMobile
             if (Sets.SelectedItem == null)
                 return;
 
-
+            this.NavigationService.Navigate(new Uri("/Album.xaml?goto=" + (List<Photo>)Photosets.Photoset.IndexOf(Sets.SelectedItem), UriKind.Relative));
 
             Sets.SelectedItem = null;
         }
